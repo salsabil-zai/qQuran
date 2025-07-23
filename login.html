@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تسجيل مستخدم جديد</title>
+  <style>
+    
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f6f6f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: #439f92;
+      width: 350px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #439f92;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #439f92;
+      border-radius: 8px;
+      background-color: #f1f8e9;
+    }
+
+    button {
+      background-color: #439f92;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #439f92;
+    }
+
+    #message {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>تسجيل  دخول</h2>
+    <form id="registerForm">
+      <input type="text" id="nom" placeholder="الاسم" required>
+      <input type="text" id="prenom" placeholder="اللقب" required>
+      <input type="email" id="email" placeholder="البريد الإلكتروني" required>
+      <input type="password" id="password" placeholder="كلمة المرور" required>
+      <button type="submit">تسجيل</button>
+      <p id="message"></p>
+    </form>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-app.js";
+    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCYj4qjhxkMVTQpiLb311NsPHGgELwwzSM",
+      authDomain: "quran-3a1e2.firebaseapp.com",
+      projectId: "quran-3a1e2",
+      storageBucket: "quran-3a1e2.appspot.com",
+      messagingSenderId: "173637516210",
+      appId: "1:173637516210:web:bb9237b4ea62702f50c2ab",
+      measurementId: "G-GXXWC3216Y"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    const form = document.getElementById("registerForm");
+    const message = document.getElementById("message");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const nom = document.getElementById("nom").value;
+      const prenom = document.getElementById("prenom").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      try {
+        await addDoc(collection(db, "users"), {
+          nom,
+          prenom,
+          email,
+          password
+        });
+        message.textContent = "تم التسجيل بنجاح!";
+        message.style.color = "green";
+        form.reset();
+      } catch (error) {
+        console.error("خطأ:", error);
+        message.textContent = "حدث خطأ أثناء التسجيل.";
+        message.style.color = "red";
+      }
+    });
+  </script>
+
+</body>
+</html>

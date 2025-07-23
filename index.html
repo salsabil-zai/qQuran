@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <title>Quaran</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-572-designer.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+<!--
+
+TemplateMo 572 Designer
+
+https://templatemo.com/tm-572-designer
+
+-->
+  </head>
+
+<body>
+
+  <div class="loader">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+       width="34px" height="40px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+      <rect x="0" y="10" width="4" height="10" fill="#333" opacity="0.2">
+        <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0s" dur="0.8s" repeatCount="indefinite" />
+        <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0s" dur="0.8s" repeatCount="indefinite" />
+        <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0s" dur="0.8s" repeatCount="indefinite" />
+      </rect>
+      <rect x="8" y="10" width="4" height="10" fill="#333"  opacity="0.2">
+        <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.15s" dur="0.8s" repeatCount="indefinite" />
+        <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.15s" dur="0.8s" repeatCount="indefinite" />
+        <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.15s" dur="0.8s" repeatCount="indefinite" />
+      </rect>
+      <rect x="16" y="10" width="4" height="10" fill="#333"  opacity="0.2">
+        <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.3s" dur="0.8s" repeatCount="indefinite" />
+        <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.3s" dur="0.8s" repeatCount="indefinite" />
+        <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.3s" dur="0.8s" repeatCount="indefinite" />
+      </rect>
+    </svg>
+  </div>
+
+  <header id="#top">
+
+      <nav class="main-navigation navbar navbar-expand-lg navbar-light">
+          <div class="container">
+            <a class="navbar-brand" href="index.html"><img class="logo" src="" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">الرئيسية</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="sora.html"> عرض السور </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="# البث المباشر">البث المباشر</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="tafasir.html">التفسير</a>
+                </li>
+             
+                
+              </ul>
+            </div>
+          </div>
+      </nav>
+
+  </header>
+
+  <div class="main-banner change-name">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12">
+                  <div class="header-text">
+                      <h6>القرآن</h6>
+                      <h2><em>القرآن</em> الكريم </h2>
+                      
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="search-form">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12">
+                  <form id="search-form" name="gs" method="submit" role="search" action="#">
+                      <div class="row">
+                         
+                          <div class="col-lg-4">
+                              <fieldset>
+                                  <label for="chooseCategory" class="form-label">إختر القارئ</label>
+                                  <select name="Category" class="form-select" aria-label="Default select example" id="chooseReciters" >
+                                      
+                                  </select>
+                              </fieldset>
+                        
+                          </div>
+                          <div class="col-lg-4">
+                              <fieldset>
+                                  <label for="chooseMoshaf" class="form-label">إختر الرواية</label>
+                                  <select name="Price" class="form-select" aria-label="Default select example" id="chooseMoshaf">
+                                    
+                                  </select>
+                                   
+                           
+                              </fieldset>
+                          </div>
+                          <div class="col-lg-4">
+                              <fieldset>
+                                  <label for="choosesurah" class="form-label">إختر السورة</label>
+                                  <select name="Plan" class="form-select" aria-label="Default select example" id="choosesurah">
+                                     
+                                  </select>
+                              </fieldset>
+                          </div>
+                          <div class="col-lg-12">                        
+                            <audio id="audioplayer" controls autoplay muted style="width: 1185px;">
+                                <source src="horse.ogg" type="audio/ogg">
+                                <source src="horse.mp3" type="audio/mpeg">
+                              Your browser does not support the audio element.
+                              </audio>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+
+<section class="contact-us" id=" البث المباشر" class="">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center mb-4">
+                <h1 class="ganat">قناة البث المباشر</h1>
+            
+            <span class="white-button">
+                <a href="javascript:void()" onclick="playlive('https://win.holol.com/live/quran/playlist.m3u8')">قناة القرآن الكريم</a>
+            </span>
+            <span class="white-button">
+                <a href="javascript:void()" onclick="playlive('https://win.holol.com/live/sunnah/playlist.m3u8')">قناة السنة النبوية</a>
+            </span>
+        </div>
+        <video width="100%" controls id="livevideo">
+            <source src="" type="video/mp4">
+            <source src="" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+  
+</div>
+</div>
+  </section>
+
+
+  <footer>
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-4">
+                  <div class="about-widget">
+                    
+                      <img src="quranpng.parspng.com-5.png" alt="designer template by TemplateMo">
+                      
+                  </div>
+              </div>
+              <div class="col-lg-2 offset-lg-2">
+                  <div class="location-widget">
+                      <h4></h4>
+                      <p> <br><br> <br></p>
+                  </div>
+              </div>
+              <div class="col-lg-2">
+                  <div class="customer-care">
+                      <h4>
+                        
+                      </h4>
+                      <ul class="info">
+                          <li><a href="#"></a></li>
+                          <li><a href="#"></a></li>
+                          <li><a href="#"></a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-lg-2">
+                  <div class="follow-us">
+                      <h4></h4>
+                      <ul class="social-links">
+                          <li>
+                              <a href="#">
+                               
+                                
+                              </a>
+                          </li>
+                          <li >
+                            <a href="About us.html" >من نحن </a>
+                          </li>
+                          <li>
+                             <a href="Contact us.html">اتصل بنا</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+             
+              <div class="col-lg-12">
+                  <div class="sub-footer">
+                      <div class="row">
+                          <div class="col-lg-6">
+                              <p>Copyright © 2025  القرآن الكريم </p>
+                         
+                          </div>
+                          <div class="col-lg-6">
+                              <a href="#top" class="scroll-to-top">
+                                  Go to Top
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-up" viewBox="0 0 16 16">
+                                      <path fill-rule="evenodd" d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5zm-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5z"/>
+                                  </svg>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="jquery.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+
+  <script src="isotope.min.js"></script>
+  <script src="owl-carousel.js"></script>
+
+  <script src="tabs.js"></script>
+  <script src="popup.js"></script>
+  <script src="custom.js"></script>
+  <script src="script.js"></script>
+  <script>
+    setTimeout(function(){
+        $('.loader').fadeToggle();
+    }, 1500);
+	
+	$("a[href='#top']").click(function() {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+    });
+  </script>
+
+</body>
+</html>
